@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resume Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="resume-maker">
+        <h1>Create Your Resume</h1>
+        <form id="resumeForm">
+            <div class="photo-upload">
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" accept="image/*">
+            </div>
+
+            <div class="form-section">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-section">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-section">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            </div>
+
+            <div class="form-section">
+                <label for="summary">Professional Summary</label>
+                <textarea id="summary" placeholder="Brief Summary"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label for="education">Education</label>
+                <textarea id="education" placeholder="Your Educational Background"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label for="experience">Experience</label>
+                <textarea id="experience" placeholder="Your Work Experience"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label for="skills">Skills</label>
+                <textarea id="skills" placeholder="List of Your Skills"></textarea>
+            </div>
+
+            <button type="button" onclick="generatePDF()">Download Resume</button>
+        </form>
+    </div>
+
+    <div id="resumePreview" class="resume-preview"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
